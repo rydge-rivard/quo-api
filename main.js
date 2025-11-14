@@ -24,9 +24,6 @@ async function handleFormSubmit(event) {
 }
 
 async function createContact(event) {
-  if (event) {
-    event.preventDefault();
-  }
   const apiKey = document.getElementById("apiKey").value.trim();
   const fName = document.getElementById("firstName").value.trim();
   const phoneNumber = document.getElementById("phoneNumber").value.trim();
@@ -73,9 +70,6 @@ async function createContact(event) {
 }
 
 async function textContact(event) {
-  if (event) {
-    event.preventDefault();
-  }
   const apiKey = document.getElementById("apiKey").value.trim();
   const fName = document.getElementById("firstName").value.trim();
   const phoneNumber = document.getElementById("phoneNumber").value.trim();
