@@ -63,7 +63,7 @@ async function textContact(event) {
   const text = {
     content: "Hello, thanks for your message.",
     from: "+12266415883",
-    to: [`+${phoneNumber}`],
+    to: [`+1${phoneNumber}`],
   };
 
   try {
