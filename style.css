@@ -8,19 +8,10 @@
   color: #332424;
 }
 
-.headshot img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.headshot {
-  margin: 120px 60px 60px;
-}
-
 .top-s {
   background-color: #f6f3ec;
   display: flex;
-  padding: 60px;
+  padding: 36px;
   gap: 6px;
   flex-direction: column;
   align-items: center;
@@ -40,10 +31,8 @@
   font-weight: 100;
 }
 
-.about-me,
-.projects,
-footer {
-  padding: 60px 24px;
+.about-me {
+  padding: 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,42 +83,51 @@ button:hover {
   cursor: pointer;
 }
 
-.projects h3,
-footer h4,
 .about-me h2 {
   font-size: 32px;
   font-weight: 400;
   letter-spacing: -1px;
 }
 
-.projects h3 {
-  text-align: center;
-  flex-basis: 100%;
+.form-container {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  gap: 60px;
 }
 
-footer {
-  background-color: #000000;
-  padding: 48px 24px 24px 24px;
+.form-container form {
+  width: 400px;
 }
 
-footer * {
-  color: #f6f3ec;
+.form-group {
+  margin-bottom: 15px;
 }
-
-footer a {
-  text-decoration: none;
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
 }
-
-footer p {
-  text-align: center;
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid black;
 }
-
-.footer-icon {
-  width: 35px;
+.form-group input[type="submit"],
+.cta-wrapper button {
+  width: auto;
+  background-color: #517b65;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
 }
-
-.line {
-  height: 1px;
-  width: 80%;
-  background-color: black;
+.form-group input[type="submit"]:hover,
+.cta-wrapper button:hover {
+  background-color: #2d6045;
 }
