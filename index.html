@@ -22,24 +22,35 @@
         </p>
       </section>
       <div class="form-container">
-        <form action="" method="post">
+        <form action="" method="post" id="contactForm">
           <fieldset>
             <legend>New Content Creator</legend>
             <ul>
               <li>
-                <label for="fname">First Name*</label>
-                <input type="fname" name="fname" id="fname" required />
+                <label for="apiKey">API Key*</label>
+                <input type="password" name="apiKey" id="apiKey" required />
               </li>
               <li>
-                <label for="lname">Last Name*</label>
-                <input type="lname" name="lname" id="lname" required />
+                <label for="firstName">First Name*</label>
+                <input type="text" name="firstName" id="firstName" required />
               </li>
               <li>
-                <label for="phone">Phone Number*</label>
-                <input type="number" name="phone" id="phone" required />
+                <label for="lastName">Last Name*</label>
+                <input type="text" name="lastName" id="lastName" required />
+              </li>
+              <li>
+                <label for="phoneNumber">Phone Number*</label>
+                <input
+                  type="number"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  required
+                />
               </li>
             </ul>
-            <button id="confirmBtn" value="default">Submit</button>
+            <button id="confirmBtn" value="default" onclick="createContact()">
+              Submit
+            </button>
           </fieldset>
         </form>
       </div>
