@@ -20,6 +20,7 @@
 .top-s {
   background-color: #f6f3ec;
   display: flex;
+  padding: 60px;
   gap: 6px;
   flex-direction: column;
   align-items: center;
@@ -27,7 +28,6 @@
 }
 
 .top-s h1 {
-  padding: 120px 0 0 0;
   font-size: 66px;
   text-align: center;
   letter-spacing: -2.5px;
@@ -174,38 +174,4 @@ footer p {
   filter: blur(5px);
   transform: translateY(-100%);
   transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-}
-
-.icon:nth-child(2) {
-  transition-delay: 100ms;
-}
-
-.icon:nth-child(3) {
-  transition-delay: 200ms;
-}
-
-.icon:nth-child(4) {
-  transition-delay: 300ms;
-}
-
-.icon:nth-child(5) {
-  transition-delay: 400ms;
-}
-
-.icon:nth-child(6) {
-  transition-delay: 500ms;
-}
-
-.icon:nth-child(7) {
-  transition-delay: 600ms;
-}
-
-.icon:nth-child(8) {
-  transition-delay: 700ms;
 }
