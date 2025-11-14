@@ -7,16 +7,19 @@ async function handleFormSubmit(event) {
     event.preventDefault();
   }
 
-  console.log("Starting contact creation...");
+  console.log("Texting contact...");
 
   try {
-    // 1. Run the first function to create the contact
-    await createContact(null);
+    // 1. Run the function to text the contact
+    await textContact();
 
-    // 2. Run the second function to text the contact
-    await textContact(null);
+    console.log("Texting successful.");
+    console.log("Starting contact creation...");
 
-    console.log("Contact created and text initiated successfully.");
+    // 2. Run the function to create the contact
+    await createContact();
+
+    console.log("Contact created successfully.");
   } catch (error) {
     // A single catch block to handle errors from either function
     console.error("An error occurred during the submission process:", error);
