@@ -29,12 +29,14 @@ async function handleFormSubmit(event) {
 async function createContact(event) {
   const apiKey = document.getElementById("apiKey").value.trim();
   const fName = document.getElementById("firstName").value.trim();
+  const lName = document.getElementById("lastName").value.trim();
   const phoneNumber = document.getElementById("phoneNumber").value.trim();
   const API_BASE_URL = "http://localhost:8080/proxy/v1/contacts";
 
   const data = {
     defaultFields: {
       firstName: fName,
+      lastName: lName,
       phoneNumbers: [
         {
           name: "primary",
@@ -80,7 +82,7 @@ async function textContact(event) {
   console.log(phoneNumber);
 
   const text = {
-    content: "Hello, thanks for your message.",
+    content: `Hi ${fName}, this is an automatic reply to notify that we received your form submission and will be in touch soon.`,
     from: "+12266415883",
     to: [`+1${phoneNumber}`],
   };
