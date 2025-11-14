@@ -7,22 +7,19 @@ async function createContact(event) {
   }
   const apiKey = document.getElementById("apiKey").value.trim();
   const fName = document.getElementById("firstName").value.trim();
-  const lName = document.getElementById("lastName").value.trim();
   const phoneNumber = document.getElementById("phoneNumber").value.trim();
-  const API_BASE_URL = "https://api.openphone.com/v1/contacts";
+  const API_BASE_URL = "http://localhost:8080/proxy/v1/contacts";
 
   const data = {
     defaultFields: {
       firstName: fName,
-      lastName: lName,
       phoneNumbers: [
         {
-          name: "primary", // Required structure
+          name: "primary",
           value: phoneNumber,
         },
       ],
     },
-    source: "public-api",
   };
 
   try {
@@ -34,8 +31,10 @@ async function createContact(event) {
       },
       body: JSON.stringify(data), // 4. Send the data
     });
+    console.log(`API Status Code: ${response.status}`);
 
     if (!response.ok) {
+      console.log(response.status);
       // Handle non-2xx status codes (e.g., 401, 400, 500)
       const errorData = await response.json();
       throw new Error(errorData.message || `API Error: ${response.status}`);
@@ -46,6 +45,6 @@ async function createContact(event) {
     // Now you display contactData to the user
   } catch (error) {
     // Handle network errors or errors thrown above
-    console.log(showMessage(`Failed to create contact: ${error.message}`));
+    console.log(`Failed: ${error.message}`);
   }
 }
