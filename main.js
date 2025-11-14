@@ -1,6 +1,28 @@
 //UID - US0eaEh5XX
 //PID - PN81cOokrb
 
+async function handleFormSubmit(event) {
+  // Prevent the default form submission behavior
+  if (event) {
+    event.preventDefault();
+  }
+
+  console.log("Starting contact creation...");
+
+  try {
+    // 1. Run the first function to create the contact
+    await createContact(null);
+
+    // 2. Run the second function to text the contact
+    await textContact(null);
+
+    console.log("Contact created and text initiated successfully.");
+  } catch (error) {
+    // A single catch block to handle errors from either function
+    console.error("An error occurred during the submission process:", error);
+  }
+}
+
 async function createContact(event) {
   if (event) {
     event.preventDefault();
